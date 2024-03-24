@@ -1,0 +1,151 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  place-items: center;
+  background-color: rgba(20, 24, 24, 0.432);
+}
+.container {
+  margin-top: 20px;
+  width: 700px;
+  height: 420px;
+  background-color: #f39494;
+  display: flex;
+}
+.head {
+  background-color: rgb(37, 33, 33);
+  padding: 20px;
+  flex-direction: column;
+  flex: 1;
+  color: white;
+}
+.head h3 {
+  color: rgb(240, 243, 35);
+}
+.head,
+h3,
+h4,
+h1 {
+  font-weight: 600;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.income-expense-container {
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
+.income-expense-container div {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 10px;
+  flex: 1;
+  border-radius: 2px;
+}
+.income-expense-container div p {
+  font-size: 22px;
+}
+.income-expense-container div.income {
+  color: rgb(39, 215, 215);
+  border: 3px solid rgb(38, 224, 224);
+}
+.income-expense-container div.expense {
+  color: rgb(231, 28, 28);
+  border: 3px solid rgb(236, 23, 23);
+}
+#form {
+  padding: 5px;
+}
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+input[type="text"],
+input[type="number"] {
+  border: 1px solid white;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+  border-radius: 2px;
+}
+.button {
+  background-color: rgb(167, 78, 156);
+  color: rgb(252, 251, 251);
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: rgb(113, 48, 204);
+  color: black;
+}
+.transaction {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.transaction h3 {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+  margin-bottom: 5px;
+}
+.trans {
+  list-style-type: none;
+}
+.trans li {
+  background-color: rgb(56, 55, 55);
+  color: #f6f1f1;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  position: relative;
+  cursor: alias;
+  box-shadow: 1px 1px 1px 1px;
+  user-select: none;
+}
+.trans li.inc {
+  border-left: 10px solid rgb(33, 166, 33);
+}
+.trans li.exp {
+  border-left: 10px solid rgb(223, 18, 18);
+}
+.btn-del {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(44, 44, 67);
+  color: white;
+  font-weight: 600;
+  border: none;
+  line-height: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+.trans li:hover .btn-del {
+  opacity: 1;
+}

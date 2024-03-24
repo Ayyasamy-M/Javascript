@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <!-- <h1 class="head">JAvascript</h1>
+    <h1 id="head2">node js</h1>
+    <h1 id="head3">script</h1>
+    <h1 id="head4">JAva</h1>
+    <h1 id="head5">JAvascript</h1> -->
+
+    <h1 id="events">Event class</h1>
+    <!-- <button onclick="demo()">Click!</button> -->
+    <button id="Click" onclick="Click">click</button>
+    <p id="demo">demo</p>
+    <input type="text" id="input" />
+    <script>
+      // let text = "hello";
+      // document.getElementById("head2").innerHTML = text;
+      // // console.log((element.innerText = "hello"));
+
+      //   function change(v) {
+      //     let v = [2, 6, 7, 8, "red", false, 3, ];
+      //     array.filter(change(v){
+      //       if (v > 2) {
+      //         console.log(v);
+      //       }
+      //   });
+      // }
+      //   console.log(change);
+      // student.filter(function (v) {
+      //
+      // });
+      // if (v < 20) {
+      //     console.log("true");
+      //   } else {
+      //     console.log("false");
+      //   }
+
+      // let array = [1, 2, 3, 4];
+      // array.forEach((v, i, a) => {
+      //   console.log(`values:${v},index:${i},array:${a}`);
+      // // });
+      // let change = (total, age, data) => {
+      //   let get = total;
+      //   console.log(`value:${get}`);
+      // };
+      // change("2", "3", 77);
+
+      // let student = function student() {
+      //   let student = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      //   student.filter(function (v) {
+      //     if (v > 20) {
+      //       console.log(v);
+      //     }
+      //   });
+      // };
+      // student();
+
+      document.getElementById("Click").addEventListener("click", displayDate);
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+
+      let Click = () => {
+        let input = document.getElementById("input");
+        console.log(input.value);
+        document.getElementById("input").value = "";
+      };
+    </script>
+  </body>
+</html>

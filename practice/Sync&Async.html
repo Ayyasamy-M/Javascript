@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronous&Asynchronous</title>
+  </head>
+  <body>
+    <h1>Promise</h1>
+    <p id="para"></p>
+
+    <script>
+      // let fun = () => {
+      //   console.log("hi");
+      // };
+
+      // setTimeout(() => {
+      //   console.log(fun());
+      // }, 2000);
+
+      // let data = () => {
+      //   console.log("welcome");
+      // };
+      // data();
+
+      // function display(values) {
+      //   document.getElementById("para").innerHTML = values;
+      // }
+
+      // let promise = new Promise(function (success, reject) {
+      //   let x = 0;
+      //   if (x === 0) {
+      //     success("ok");
+      //   } else {
+      //     reject("err");
+      //   }
+      // });
+      // promise
+      //   .then((v) => {
+      //     console.log(v);
+      //     display(v);
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //     display(err);
+      //   });
+
+      //   console.log(promise);
+      // setTimeout(() => {
+      //   console.log(promise);
+      // }, 1000);
+
+      async function value() {
+        return new Promise(function (success, reject) {
+          let x = 0;
+          if (x === 0) {
+            success("ok");
+          } else {
+            reject("reject");
+          }
+        });
+      }
+      async function data() {
+        let datas = await value();
+        console.log(datas);
+      }
+      data();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        width: 500px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+      }
+      input {
+        width: 150px;
+      }
+      button {
+        width: 60px;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        width: 150px;
+        background-color: rgb(138, 126, 229);
+        border-collapse: collapse;
+      }
+      #table1 {
+        width: 150px;
+        position: fixed;
+      }
+      #table2 {
+        margin-left: 200px;
+        margin-top: 0px;
+        width: 150px;
+        position: fixed;
+      }
+      #table3 {
+        margin-left: 400px;
+        width: 150px;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="para">Welcome</p>
+    <div id="table1">
+      <input type="text" id="input" />
+      <button id="btn" onclick="fun1()">Click</button>
+      <br />
+      <br />
+      <table>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </table>
+    </div>
+    <div id="table2">
+      <input type="text" id="input2" />
+      <button id="btn" onclick="fun2()">Click</button>
+      <br />
+      <br />
+      <table>
+        <tr>
+          <th>Email</th>
+        </tr>
+      </table>
+    </div>
+    <div id="table3">
+      <input type="text" id="input3" />
+      <button id="btn" onclick="fun3()">Click</button>
+      <br />
+      <br />
+      <table>
+        <tr>
+          <th>Address</th>
+        </tr>
+      </table>
+    </div>
+    <script src="/practice2.js"></script>
+  </body>
+</html>

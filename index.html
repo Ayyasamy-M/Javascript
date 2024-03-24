@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="input2"></div>
+    <div id="heading">
+      <h1>Popup Webpage</h1>
+      <div class="popup-window">
+        <div id="input-box">
+          <form id="form-box" action="#">
+            <input id="title" type="text" placeholder="Enter the Title" />
+            <input
+              id="authorname"
+              type="text"
+              placeholder="Enter the AuthorName" />
+            <textarea
+              name=""
+              id="desc"
+              placeholder="Enter Description"></textarea>
+            <button id="form-box-add" onclick="add()">Add</button>
+            <button id="form-box-cancel">Cancel</button>
+          </form>
+        </div>
+
+        <div class="popup-box">
+          <div class="popup-overlay">
+            <h1>Window</h1>
+            <h2>Robert</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              odio? Delectus non, provident inventore minima id ipsa totam ea
+              repellendus quidem labore eligendi quibusdam nesciunt, adipisci
+              quod sint unde minus.
+            </p>
+            <button id="del" onclick="delpopup(event)">delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="plus-button" onclick="plus()">+</button>
+    <script src="./demo.js"></script>
+  </body>
+</html>

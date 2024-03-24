@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax Method</title>
+  </head>
+  <body>
+    <button onclick="read()">Click Me!</button>
+    <div id="div"></div>
+    <script>
+      let read = () => {
+        let http = new XMLHttpRequest();
+        http.onload = function () {
+          document.getElementById("div").innerHTML = this.responseText;
+        };
+        http.open("GET", "./calculator.html");
+        http.send();
+      };
+
+      // let read = () => {
+      //   let http = new XMLHttpRequest();
+      //   http.onreadystatechange = function () {
+      //     if (this.readyState === 4 && this.status === 200) {
+      //       document.getElementById("div").innerHTML = this.responseText;
+      //     } else {
+      //       document.getElementById("div").innerHTML = "Not Found";
+      //     }
+      //   };
+      //   http.open("GET", "./calculator.html");
+      //   http.send();
+      // };
+
+      // let array = [1, 2, 3];
+
+      // let data = ["hi", "welcome"];
+
+      // let find = [...array, ...data, "ayya"];
+      // console.log(find);
+    </script>
+  </body>
+</html>

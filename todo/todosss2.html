@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <input type="text" id="input" />
+      <button onclick="add()">Add</button>
+    </div>
+    <ul id="head">
+      <li>
+        <span>AYYASAMY</span>
+        <span>BHARATH</span>
+        <span>POOVARASAN</span>
+      </li>
+    </ul>
+    <button id="edit">EDIT</button>
+  </body>
+  <script>
+    function add() {
+      let div = document.getElementById("container");
+      let input = document.getElementById("input");
+      let submit = document.createElement("button");
+      submit.textContent = "Submit";
+
+      let ul = document.getElementById("head");
+      let li = document.createElement("li");
+      let span = document.createElement("span");
+      span.textContent = input.value;
+      let edit = document.getElementById("edit");
+
+      div.append(input);
+      div.append(submit);
+      ul.append(li);
+      li.append(span);
+      span = li.firstElement;
+
+      li.insertBefore(input, span);
+      console.log(li);
+    }
+  </script>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data Management</title>
+    <style>
+      body {
+        margin: 4rem;
+      }
+
+      #formContainer {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input,
+      textarea {
+        width: 300px;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        margin: 10px;
+        padding: 8px 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="color: green">Geekforgeeks!!</h1>
+    <h2>User Data Management</h2>
+
+    <div id="formContainer">
+      <label for="nameInput"> Name: </label>
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <label for="emailInput"> Email I'd: </label>
+      <input type="email" id="emailInput" placeholder="Enter your email" />
+      <label for="numberInput"> Mobile Details: </label>
+      <input
+        type="text"
+        id="numberInput"
+        placeholder="Enter your mobile details" />
+      <label for="addressInput"> Address: </label>
+      <textarea id="addressInput" placeholder="Enter your address"> </textarea>
+      <button onclick="addData()">Add</button>
+    </div>
+    <table id="outputTable">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile Details</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </table>
+    <script>
+      function addData() {
+        // Get input values
+        let name = document.getElementById("nameInput").value;
+        let email = document.getElementById("emailInput").value;
+        let mobile = document.getElementById("numberInput").value;
+        let address = document.getElementById("addressInput").value;
+
+        // Get the table and insert a new row at the end
+        let table = document.getElementById("outputTable");
+        let newRow = table.insertRow(table.rows.length);
+
+        // Insert data into cells of the new row
+        newRow.insertCell(0).innerHTML = name;
+        newRow.insertCell(1).innerHTML = email;
+        newRow.insertCell(2).innerHTML = mobile;
+        newRow.insertCell(3).innerHTML = address;
+        newRow.insertCell(4).innerHTML =
+          '<button onclick="editData(this)">Edit</button>' +
+          '<button onclick="deleteData(this)">Delete</button>';
+
+        // Clear input fields
+        clearInputs();
+      }
+
+      function editData(button) {
+        // Get the parent row of the clicked button
+        let row = button.parentNode.parentNode;
+
+        // Get the cells within the row
+        let nameCell = row.cells[0];
+
+        // Prompt the user to enter updated values
+        let nameInput = prompt("Enter the updated name:", nameCell.innerHTML);
+
+        // Update the cell contents with the new values
+        nameCell.innerHTML = nameInput;
+      }
+      function deleteData(button) {
+        // Get the parent row of the clicked button
+        let row = button.parentNode.parentNode;
+
+        // Remove the row from the table
+        row.parentNode.removeChild(row);
+      }
+      function clearInputs() {
+        // Clear input fields
+        document.getElementById("nameInput").value = "";
+        document.getElementById("emailInput").value = "";
+        document.getElementById("numberInput").value = "";
+        document.getElementById("addressInput").value = "";
+      }
+    </script>
+  </body>
+</html> -->
